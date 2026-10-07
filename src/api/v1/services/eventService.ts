@@ -1,9 +1,6 @@
 export function getPopularityTier(registrationCount : number, capacity : number) : any {
-
     var popularityScore = (registrationCount / capacity) * 100
     var popularityTier = ""
-
-    
 
     if (popularityScore > 89){
         popularityTier = "Hot"
@@ -21,5 +18,5 @@ export function getPopularityTier(registrationCount : number, capacity : number)
         popularityTier = "New"
     }
 
-    return popularityTier
+    return {popularityScore, popularityTier}
 }

@@ -2,6 +2,8 @@ import express, { Express } from "express";
 
 const app: Express = express();
 
+app.use(express.json());
+
 interface HealthCheckResponse {
     status: string;
     uptime: number;
